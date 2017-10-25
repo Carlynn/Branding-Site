@@ -1,0 +1,2 @@
+module HcdesignsHelper
+end
