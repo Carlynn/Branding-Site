@@ -1,15 +1,14 @@
 <p>test portfolio</p>
 
 <% @posts.each do |post| %>
-  <% if post.default_image.empty? %>
-    <%= image_tag(asset_path('no_image.png'), class: "circle") %>
-  <% else %>
-    <%= image_tag(post.default_image, class: "circle") %>
-  <% end %>
+  <p><%= image_tag post.image.url(:medium) %></p>
   <p><%= link_to post.title, portfolio_path(post.slug) %></p>
-  <p>Description: <%= post.description %></p>
+  <p>Description: <%= post.description.slice(0, 500)+"..." %>
+    <%= link_to "Read More", portfolio_path(post.slug) %><br></p>
   <p>Date Created: <%= post.created_at.strftime("%B").to_s + " " + post.created_at.year.to_s %> </p>
-  <%= button_to "Edit Post", edit_portfolio_path(post.slug), method:'get', class: "btn" %>
-  <%= button_to "Delete", portfolio_path(post.id), method: 'delete', data: {:confirm => "Are you sure you want to delete the #{post.title} post?"}, :method => :delete, class: "btn" %>
+  <% if current_admin %>
+    <%= button_to "Edit Post", edit_portfolio_path(post.slug), method:'get', class: "btn" %>
+    <%= button_to "Delete", portfolio_path(post.id), method: 'delete', data: {:confirm => "Are you sure you want to delete the #{post.title} post?"}, :method => :delete, class: "btn" %>
+  <% end %>
   <hr>
 <% end %>

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171025202637) do
+ActiveRecord::Schema.define(version: 20171026212441) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -18,7 +18,6 @@ ActiveRecord::Schema.define(version: 20171025202637) do
   create_table "admins", force: :cascade do |t|
     t.string "first_name"
     t.string "last_name"
-    t.string "profile_image"
     t.string "slug"
     t.string "email", default: "", null: false
     t.string "encrypted_password", default: "", null: false
@@ -36,6 +35,10 @@ ActiveRecord::Schema.define(version: 20171025202637) do
     t.string "unconfirmed_email"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "image_file_name"
+    t.string "image_content_type"
+    t.integer "image_file_size"
+    t.datetime "image_updated_at"
     t.index ["confirmation_token"], name: "index_admins_on_confirmation_token", unique: true
     t.index ["email"], name: "index_admins_on_email", unique: true
     t.index ["reset_password_token"], name: "index_admins_on_reset_password_token", unique: true
@@ -56,10 +59,16 @@ ActiveRecord::Schema.define(version: 20171025202637) do
   create_table "posts", force: :cascade do |t|
     t.string "title"
     t.string "description"
-    t.string "default_image"
     t.string "slug"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.bigint "admin_id"
+    t.string "image_file_name"
+    t.string "image_content_type"
+    t.integer "image_file_size"
+    t.datetime "image_updated_at"
+    t.index ["admin_id"], name: "index_posts_on_admin_id"
   end
 
+  add_foreign_key "posts", "admins"
 end
