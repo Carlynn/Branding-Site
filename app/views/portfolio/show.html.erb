@@ -1,0 +1,12 @@
+<p>show page for individual post</p>
+
+<p><%= @post.title %></p>
+<p>Description: <%= @post.description %></p>
+<p>Post Date: <%= @post.created_at.strftime("%B").to_s + " " + @post.created_at.year.to_s %> </p>
+<% if @post.default_image.empty? %>
+  <%= image_tag(asset_path('no_image.png'), class: "circle") %>
+<% else %>
+  <%= image_tag(@post.default_image, class: "circle") %>
+<% end %>
+<%= button_to "Edit Post", edit_portfolio_path(@post.slug), method:'get', class: "btn" %>
+<%= button_to "Delete", portfolio_path(@post.id), method: 'delete', data: {:confirm => "Are you sure you want to delete the #{@post.title} post?"}, :method => :delete, class: "btn" %>

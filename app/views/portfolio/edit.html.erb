@@ -1,0 +1,18 @@
+<p>edit post page</p>
+<%= form_for @posts, url: portfolio_path(@posts), method: "patch" do |f| %>
+    <div>
+      <%= f.label :title %>
+      <%= f.text_field :title %>
+    </div>
+    <div>
+      <%= f.label :description %>
+      <%= f.text_field :description %>
+    </div>
+
+    <div>
+      <%= f.label :default_image %>
+      <%= f.url_field :default_image %>
+    </div>
+
+    <%= f.submit "Save Changes", class: "btn" %>
+  <% end %>

@@ -1,0 +1,9 @@
+<p>profile page</p>
+<% if @admin.profile_image.empty? %>
+  <%= image_tag(asset_path('default_image.svg'), class: "circle") %>
+<% else %>
+  <%= image_tag(@admin.profile_image, class: "circle") %>
+<% end %>
+<p><%= @admin.first_name %> <%= @admin.last_name %></p>
+<p>Email: <%= @admin.email %></p>
+<p>Date Joined: <%= @admin.created_at.strftime("%B").to_s + " " + @admin.created_at.year.to_s %> </p>

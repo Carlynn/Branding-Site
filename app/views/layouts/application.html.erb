@@ -13,33 +13,33 @@
 
   <body>
     <ul id="dropdown1" class="dropdown-content">
-      <li><a href="#!">PROFILE</a></li>
+      <li><%=link_to "PROFILE", admin_path(current_admin) %></li>
       <li class="divider"></li>
-      <li><a href="#!">CREATE</a></li>
+      <li><%=link_to "CREATE", new_portfolio_path %></li>
       <li class="divider"></li>
-      <li><a href="#!">LOGOUT</a></li>
+      <li><%= link_to('Logout', destroy_admin_session_path, method: :delete) %></li>
     </ul>
     <nav>
       <div class="nav-wrapper">
-        <a href="#!" class="brand-logo">Logo</a>
+        <%=link_to "LOGO", root_path %>
         <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
         <ul class="right hide-on-med-and-down">
-          <li><a href="sass.html">SERVICES</a></li>
-          <li><a href="badges.html">PORTFOLIO</a></li>
-          <li><a href="collapsible.html">INSPIRATION</a></li>
-          <li><a href="mobile.html">ABOUT</a></li>
-          <li><a href="mobile.html">CONTACT</a></li>
+          <li><%=link_to "SERVICES", services_path %></li>
+          <li><%=link_to "PORTFOLIO", portfolio_index_path %></li>
+          <li><%=link_to "INSPIRATION", inspiration_path %></li>
+          <li><%=link_to "ABOUT", about_path %></li>
+          <li><%=link_to "CONTACT", contact_path %></li>
           <!-- Dropdown Trigger -->
           <li><a class="dropdown-button" href="#!" data-activates="dropdown1">DESIGNER TOOLS<i class="material-icons right">arrow_drop_down</i></a></li>
         </ul>
         <ul class="side-nav" id="mobile-demo">
-          <li><a href="mobile.html">PROFILE</a></li>
-          <li><a href="mobile.html">CREATE</a></li>
-          <li><a href="sass.html">SERVICES</a></li>
-          <li><a href="badges.html">PORTFOLIO</a></li>
-          <li><a href="collapsible.html">INSPIRATION</a></li>
-          <li><a href="mobile.html">ABOUT</a></li>
-          <li><a href="mobile.html">CONTACT</a></li>
+          <li><%=link_to "PROFILE", admin_path(current_admin) %></li>
+          <li><%=link_to "CREATE", new_portfolio_path %></li>
+          <li><%=link_to "SERVICES", services_path %></li>
+          <li><%=link_to "PORTFOLIO", portfolio_index_path %></li>
+          <li><%=link_to "INSPIRATION", inspiration_path %></li>
+          <li><%=link_to "ABOUT", about_path %></li>
+          <li><%=link_to "CONTACT", contact_path %></li>
           <li><a href="mobile.html">LOGOUT</a></li>
         </ul>
       </div>
