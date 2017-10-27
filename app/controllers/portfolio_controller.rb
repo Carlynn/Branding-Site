@@ -6,6 +6,7 @@ class PortfolioController < ApplicationController
 
   def show
     @post = Post.friendly.find(params[:slug])
+    @postimages = @post.images
   end
 
   def new
@@ -27,16 +28,23 @@ class PortfolioController < ApplicationController
   end
 
   def edit
-    @posts = Post.friendly.find(params[:slug])
+    @post = Post.friendly.find(params[:slug])
+    @postimages = @post.images
   end
 
   def update
-    @posts = Post.find_by(params[:slug])
-    if @posts.save
-      @posts.update(post_params)
-      redirect_to portfolio_path(@posts)
+    @post = Post.find_by(params[:slug])
+    @postimages = @post.images
+    if @post.save
+      @post.update(post_params)
+      if params[:images]
+        params[:images].each { |image|
+          @post.images.create(image: image)
+        }
+      end
+      redirect_to portfolio_path(@post)
     else
-      flash[:error] = @posts.errors.messages[:title].join(". ")
+      flash[:error] = @post.errors.messages[:title].join(". ")
       render :edit
     end
   end
@@ -53,5 +61,9 @@ class PortfolioController < ApplicationController
   def post_params
     params.require(:post).permit(:title, :description, :slug, :image)
   end
+
+  # def image_params
+  #   params.permit(:image, :image_file_name, :image_content_type, :image_file_size, :image_updated_at)
+  # end
 
 end

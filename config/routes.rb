@@ -8,6 +8,8 @@ Rails.application.routes.draw do
   get "/about" => "about#index", as: "about"
   get "/contact" => "contact#index", as: "contact"
 
+  delete "/images/:id" => "images#destroy", as: "delete_image"
+
   resources :portfolio, :except => [:show, :edit, :patch]
   resources :portfolio, param: :slug, :only => [:show, :edit, :patch]
 
