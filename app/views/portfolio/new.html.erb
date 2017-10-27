@@ -1,13 +1,18 @@
-<p>create page</p>
-<%= form_for @post, :url => {:controller => "portfolio"} do |f| %>
-    <div>
-      Title: <%= f.text_field :title, :required => true, autofocus: true %>
-    </div>
-    <div>
-      Description: <%= f.text_field :description, :required => true %>
-    </div>
-    <div>
-      Default Photo: <%= f.file_field :image %>
-    </div>
-    <%= f.submit "Create Post", class: "btn" %>
+<div class="container">
+  <p>create page</p>
+  <%= form_for @post, :url => {:controller => "portfolio"} do |f| %>
+      <div>
+        Title: <%= f.text_field :title, :required => true, autofocus: true %>
+      </div>
+      <div>
+        Description: <%= f.text_field :description, :required => true %>
+      </div>
+      <div>
+        Default Photo: <%= f.file_field :image %>
+      </div>
+      <div>
+        Photos: <%= file_field_tag "images[]", type: :file, multiple: true %>
+      </div>
+      <%= f.submit "Create Post", class: "btn" %>
     <% end %>
+</div>

@@ -1,3 +1,91 @@
 // Place all the styles related to the hcdesigns controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.header {
+  height: 90vh;
+  width: 100%;
+  background: image-url("SplashPage_01.jpg") bottom center no-repeat;
+  background-size: cover;
+  z-index: -1;
+}
+.header-title {
+  position: absolute;
+}
+.outer-box {
+  width: 100%;
+  height: 180px;
+}
+.inner-box {
+  width: 70%;
+  height: 70%;
+  margin: 0 auto;
+  position: relative;
+  border: #E4CFCF solid 2px;
+}
+.inner-fill-box {
+  width: 100%;
+  height: 100%;
+  top: 20%;
+  left: 15%;
+  position: absolute;
+  background-color: #E4CFCF;
+}
+.inner-text-box {
+  width: 100%;
+  text-align: center;
+}
+.cont-box {
+  position: relative;
+}
+.small-box {
+  width: 100%;
+  height: 75px;
+  border: white solid 10px;
+}
+.med-box {
+  width: 100%;
+  height: 150px;
+  border: white solid 10px;
+}
+.large-box {
+  width: 100%;
+  height: 225px;
+  border: white solid 10px;
+}
+.a-box {
+  background-color: blue;
+}
+.b-box {
+  background-color: red;
+}
+.c-box {
+  background-color: orange;
+}
+.d-box {
+  background-color: pink;
+}
+.e-box {
+  background-color: pink;
+}
+.f-box {
+  background-color: pink;
+}
+.g-box {
+  background-color: pink;
+}
+.h-box {
+  background-color: pink;
+}
+.i-box {
+  background-color: pink;
+}
+.abs-circle {
+  position: absolute;
+  height: 125px;
+  width: 125px;
+  background-color: white;
+  border: black solid 1px;
+  top: 200px;
+  right: 26%;
+}

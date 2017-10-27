@@ -14,7 +14,7 @@
   <body>
     <nav>
       <div class="nav-wrapper">
-        <%=link_to "LOGO", root_path %>
+        <%=link_to "HC DESIGNS", root_path %>
         <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
         <ul class="right hide-on-med-and-down">
           <li><%=link_to "SERVICES", services_path %></li>
@@ -45,14 +45,12 @@
             <li><%=link_to "ABOUT", about_path %></li>
             <li><%=link_to "CONTACT", contact_path %></li>
           <% if current_admin %>
-            <li><a href="mobile.html">LOGOUT</a></li>
+            <li><%= link_to('Logout', destroy_admin_session_path, method: :delete) %></li>
           <% end %>
         </ul>
       </div>
     </nav>
-
-    <p class="notice"><%= notice %></p>
-       <p class="alert"><%= alert %></p>
+    <div class="spacer"></div>
     <%= yield %>
         <footer style="border: blue solid 2px">
           <div class="footer-copyright">

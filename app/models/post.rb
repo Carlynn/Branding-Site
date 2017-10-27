@@ -2,10 +2,15 @@ class Post < ApplicationRecord
 
   attr_accessor :image
 
-  has_attached_file :image, styles: { lage: "600x600", medium: "300x300>", thumb: "100x100#" }, default_url: "/images/:style/missing.png"
+  has_attached_file :image,
+    styles: { lage: "600x600", medium: "300x300>", thumb: "100x100#" },
+    default_url: "/images/:style/missing.png"
   validates_attachment_content_type :image, content_type: /\Aimage\/.*\z/
-  
+
   belongs_to :admin, optional: true
+  has_many :images, dependent: :destroy
+
+  # accepts_nested_attributes_for :images, :reject_if => lambda { |f| f['image'].nil? }
 
   include FriendlyId
   friendly_id :title, use: [:finders, :slugged]

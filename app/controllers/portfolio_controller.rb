@@ -17,6 +17,11 @@ class PortfolioController < ApplicationController
     @admin = current_admin
     if @post.save
       @admin.posts << @post
+      if params[:images]
+        params[:images].each { |image|
+          @post.images.create(image: image)
+        }
+      end
     end
     redirect_to portfolio_path(@post)
   end
