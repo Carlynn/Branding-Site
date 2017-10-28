@@ -1,14 +1,15 @@
 Rails.application.configure do
 
   config.paperclip_defaults = {
-    storage: :s3,
-    s3_credentials: {
-      bucket: ENV.fetch('hcdesignsby'),
-      access_key_id: ENV.fetch('AKIAIGU6KFECHIS7N55Q'),
-      secret_access_key: ENV.fetch('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'),
-      s3_region: ENV.fetch('us-west-1'),
-    }
-  }
+       storage: :s3,
+       s3_credentials: {
+         bucket: ENV['hcdesignsby'],
+         access_key_id: ENV['AKIAJ7KNCZGLAYHSK6OA'],
+         secret_access_key: ENV['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'],
+         s3_region: ENV['us-west-1'],
+         s3_host_name: ENV['s3.us-west-1.amazonaws.com']
+       }
+   }
 
   # Settings specified here will take precedence over those in config/application.rb.
 
