@@ -18,11 +18,13 @@
 @import "materialize";
 @import "materialize/extras/nouislider";
 
-// body {
-//    display: flex;
-//    min-height: 100vh;
-//    flex-direction: column;
-//  }
+body {
+  font-family: 'Cinzel', serif;
+  color: #B2B2B2;
+  //  display: flex;
+  //  min-height: 100vh;
+  //  flex-direction: column;
+ }
 
  // main {
  //    flex: 1 0 auto;
@@ -31,6 +33,12 @@
     position: fixed;
     z-index: 1;
   }
+#sidenav-overlay {
+  z-index: 1000
+}
+.cursive {
+  font-family: 'Bad Script', cursive;
+}
 .spacer {
   width: 100vw;
   height: 55px;
@@ -45,4 +53,15 @@
 }
 .nav-wrapper {
   background-color: #E4CFCF;
+}
+.gold-txt {
+  color:#c3a343;
+    -webkit-text-fill-color: transparent;
+    background: -webkit-linear-gradient(transparent, transparent),
+    image-url("gold_foil_texture_01.jpg") repeat;
+    background: -o-linear-gradient(transparent, transparent);
+    -webkit-background-clip: text;
+}
+.hr-gray {
+  border: 1px solid #B2B2B2;
 }
