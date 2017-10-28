@@ -1,4 +1,15 @@
 Rails.application.configure do
+
+  config.paperclip_defaults = {
+    storage: :s3,
+    s3_credentials: {
+      bucket: ENV.fetch('hcdesignsby'),
+      access_key_id: ENV.fetch('AKIAIGU6KFECHIS7N55Q'),
+      secret_access_key: ENV.fetch('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'),
+      s3_region: ENV.fetch('us-west-1'),
+    }
+  }
+
   # Settings specified here will take precedence over those in config/application.rb.
 
   # Code is not reloaded between requests.
