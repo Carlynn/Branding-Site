@@ -13,44 +13,46 @@
   </head>
 
   <body>
-    <nav>
-      <div class="nav-wrapper">
-        <%=link_to "HC DESIGNS", root_path %>
-        <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
-        <ul class="right hide-on-med-and-down">
-          <li><%=link_to "SERVICES", services_path %></li>
-          <li><%=link_to "PORTFOLIO", portfolio_index_path %></li>
-          <li><%=link_to "INSPIRATION", inspiration_path %></li>
-          <li><%=link_to "ABOUT", about_path %></li>
-          <li><%=link_to "CONTACT", contact_path %></li>
-          <!-- Dropdown Trigger -->
-          <% if current_admin %>
-          <li><a class="dropdown-button" href="#!" data-activates="dropdown1">DESIGNER TOOLS<i class="material-icons right">arrow_drop_down</i></a></li>
-          <ul id="dropdown1" class="dropdown-content">
-            <li><%=link_to "PROFILE", admin_path(current_admin) %></li>
-            <li class="divider"></li>
-            <li><%=link_to "CREATE", new_portfolio_path %></li>
-            <li class="divider"></li>
-            <li><%= link_to('Logout', destroy_admin_session_path, method: :delete) %></li>
-          </ul>
-          <% end %>
-        </ul>
-        <ul class="side-nav" id="mobile-demo">
-          <% if current_admin %>
-            <li><%=link_to "PROFILE", admin_path(current_admin) %></li>
-            <li><%=link_to "CREATE", new_portfolio_path %></li>
-          <% end %>
+    <div class="navbar-fixed">
+      <nav>
+        <div class="nav-wrapper">
+          <%=link_to "HC DESIGNS", root_path %>
+          <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+          <ul class="right hide-on-med-and-down">
             <li><%=link_to "SERVICES", services_path %></li>
             <li><%=link_to "PORTFOLIO", portfolio_index_path %></li>
             <li><%=link_to "INSPIRATION", inspiration_path %></li>
             <li><%=link_to "ABOUT", about_path %></li>
             <li><%=link_to "CONTACT", contact_path %></li>
-          <% if current_admin %>
-            <li><%= link_to('Logout', destroy_admin_session_path, method: :delete) %></li>
-          <% end %>
-        </ul>
-      </div>
-    </nav>
+            <!-- Dropdown Trigger -->
+            <% if current_admin %>
+            <li><a class="dropdown-button" href="#!" data-activates="dropdown1">DESIGNER TOOLS<i class="material-icons right">arrow_drop_down</i></a></li>
+            <ul id="dropdown1" class="dropdown-content">
+              <li><%=link_to "PROFILE", admin_path(current_admin) %></li>
+              <li class="divider"></li>
+              <li><%=link_to "CREATE", new_portfolio_path %></li>
+              <li class="divider"></li>
+              <li><%= link_to('Logout', destroy_admin_session_path, method: :delete) %></li>
+            </ul>
+            <% end %>
+          </ul>
+          <ul class="side-nav" id="mobile-demo">
+            <% if current_admin %>
+              <li><%=link_to "PROFILE", admin_path(current_admin) %></li>
+              <li><%=link_to "CREATE", new_portfolio_path %></li>
+            <% end %>
+              <li><%=link_to "SERVICES", services_path %></li>
+              <li><%=link_to "PORTFOLIO", portfolio_index_path %></li>
+              <li><%=link_to "INSPIRATION", inspiration_path %></li>
+              <li><%=link_to "ABOUT", about_path %></li>
+              <li><%=link_to "CONTACT", contact_path %></li>
+            <% if current_admin %>
+              <li><%= link_to('Logout', destroy_admin_session_path, method: :delete) %></li>
+            <% end %>
+          </ul>
+        </div>
+      </nav>
+    </div>
     <div class="spacer"></div>
     <%= yield %>
         <footer style="border: blue solid 2px">

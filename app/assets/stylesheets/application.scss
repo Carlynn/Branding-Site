@@ -29,12 +29,8 @@ body {
  // main {
  //    flex: 1 0 auto;
  //  }
-  nav {
-    position: fixed;
-    z-index: 1;
-  }
 #sidenav-overlay {
-  z-index: 1000
+  z-index: 996;
 }
 .cursive {
   font-family: 'Bad Script', cursive;
