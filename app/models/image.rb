@@ -7,5 +7,8 @@ class Image < ApplicationRecord
     default_url: "/images/:style/missing.png"
   do_not_validate_attachment_file_type :image
 
+  # s3_region: ENV{"aws_region"}
+
   belongs_to :post, optional: true
+
 end
