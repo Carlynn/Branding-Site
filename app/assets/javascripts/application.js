@@ -23,4 +23,9 @@ $(document).on("turbolinks:load", function() {
   $(".button-collapse").sideNav();
   $(".dropdown-button").dropdown();
 
+  $(".div-btn").click(function(){
+  window.location = $(this).attr("href");
+
+});
+
 });
