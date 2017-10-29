@@ -1,3 +1,66 @@
 // Place all the styles related to the inspiration controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.circle-a {
+  display: inline-block;
+  background-color: red;
+}
+.circle-b {
+  display: inline-block;
+  background-color: pink;
+}
+.circle-c {
+  display: inline-block;
+  background-color: yellow;
+}
+.circle-d {
+  display: inline-block;
+  background-color: green;
+}
+.rectangle-flex {
+  position: relative;
+  width: 100%;
+  height: auto;
+  padding-top: 50%;
+  border: #B2B2B2 solid 1px;
+}
+.rectangle-a {
+  background-color: red;
+}
+.rectangle-b {
+  background-color: pink;
+}
+.rectangle-c {
+  background-color: yellow;
+}
+.circle-insp {
+position: relative;
+border-radius: 50%;
+width: 100%;
+height: auto;
+padding-top: 100%;
+border: #B2B2B2 solid 1px;
+}
+.parent-padding {
+  padding: 3% !important;
+}
+.square-flex {
+  position: relative;
+  width: 100%;
+  height: auto;
+  padding-top: 100%;
+  border: #B2B2B2 solid 1px;
+}
+.square-a {
+  // background-color: red;
+}
+.square-b {
+  // background-color: pink;
+}
+.square-c {
+  // background-color: yellow;
+}
+.square-d {
+  // background-color: orange;
+}
