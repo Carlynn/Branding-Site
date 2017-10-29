@@ -25,6 +25,10 @@ body {
   //  min-height: 100vh;
   //  flex-direction: column;
  }
+a {
+ color: inherit;
+ text-decoration: inherit;
+}
 
  // main {
  //    flex: 1 0 auto;
@@ -34,10 +38,6 @@ body {
 }
 .cursive {
   font-family: 'Bad Script', cursive;
-}
-.spacer {
-  width: 100vw;
-  height: 55px;
 }
 .container-fluid {
   margin: 0;
