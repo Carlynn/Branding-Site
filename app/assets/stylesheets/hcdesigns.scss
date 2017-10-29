@@ -8,6 +8,7 @@
   background: image-url("SplashPage_01.jpg") bottom center no-repeat;
   background-size: cover;
   z-index: -1;
+  margin-bottom: 40px;
 }
 .header-title {
   position: absolute;
@@ -31,11 +32,6 @@
   left: 15%;
   position: absolute;
   background-color: #E4CFCF;
-  // text-align: center;
-  // margin: 0 auto;
-  // float: none;
-  // text-align: center;
-  // display: inline-block;
 }
 .inner-fill-box:hover {
   box-shadow: 0px 0px 15px 2px #B2B2B2;
@@ -44,11 +40,8 @@
 }
 .inner-text-box {
   width: 100%;
-  // text-align: center;
   padding: 10px;
   margin: 0 auto;
-  // float: none;
-  // display: inline-block;
 }
 .cont-box {
   position: relative;
