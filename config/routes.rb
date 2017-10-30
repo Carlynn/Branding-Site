@@ -6,7 +6,8 @@ Rails.application.routes.draw do
   get "/services" => "services#index", as: "services"
   get "/inspiration" => "inspiration#index", as: "inspiration"
   get "/about" => "about#index", as: "about"
-  get "/contact" => "contact#index", as: "contact"
+  get "/contact" => "contact#new", as: "contact"
+  post "/contact" => "contact#create", as: "create_message"
 
   delete "/images/:id" => "images#destroy", as: "delete_image"
 
