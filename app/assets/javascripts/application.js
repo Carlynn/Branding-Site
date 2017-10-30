@@ -18,8 +18,6 @@
 //= require materialize-sprockets
 //= require materialize/extras/nouislider
 
-
-
 $(document).on("turbolinks:load", function() {
   $(".button-collapse").sideNav();
   $(".dropdown-button").dropdown();
