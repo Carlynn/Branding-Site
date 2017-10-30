@@ -208,6 +208,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  actionmailer (~> 5.1, >= 5.1.4)
   aws-sdk (~> 2)
   byebug
   coffee-rails (~> 4.2)
