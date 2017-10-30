@@ -2,13 +2,13 @@ development:
   :address: smtp.gmail.com
   :port: 587
   :authentication: plain
-  :user_name: hcdesignsby@gmail.com
-  :password: brandingforpizza01
+  :user_name: ENV.fetch('MY_EMAIL')
+  :password: ENV.fetch('MY_PASSWORD')
   :enable_starttls_auto: true
 production:
   :address: smtp.gmail.com
   :port: 587
   :authentication: plain
-  :user_name: hcdesignsby@gmail.com
-  :password: brandingforpizza01
+  :user_name: ENV.fetch('MY_EMAIL')
+  :password: ENV.fetch('MY_PASSWORD')
   :enable_starttls_auto: true
