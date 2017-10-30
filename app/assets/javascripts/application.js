@@ -13,6 +13,7 @@
 //= require rails-ujs
 //= require jquery
 //= require turbolinks
+//= require maskedinput
 //= require_tree .
 //= require materialize-sprockets
 //= require materialize/extras/nouislider
@@ -24,8 +25,11 @@ $(document).on("turbolinks:load", function() {
   $(".dropdown-button").dropdown();
 
   $(".div-btn").click(function(){
-  window.location = $(this).attr("href");
+    window.location = $(this).attr("href");
+  });
 
-});
+  jQuery(function($){
+   $("#phone").mask("(999) 999-9999");
+  });
 
 });
