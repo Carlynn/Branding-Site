@@ -14,6 +14,7 @@ gem 'aws-sdk', '~> 2'
 gem 'figaro'
 gem "paperclip", git: "git://github.com/thoughtbot/paperclip.git"
 gem 'actionmailer', '~> 5.1', '>= 5.1.4'
+gem 'maskedinput-rails', '~> 1.4', '>= 1.4.1.0'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.1.4'
 # Use postgresql as the database for Active Record
