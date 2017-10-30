@@ -15,8 +15,6 @@ class Admin < ApplicationRecord
     }
   validates_attachment_content_type :image, content_type: /\Aimage\/.*\z/
 
-  # s3_region: ENV{"us-west-1"}
-
   has_many :posts, dependent: :destroy
 
   devise :database_authenticatable, :registerable,
