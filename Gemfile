@@ -10,9 +10,12 @@ gem 'friendly_id', '~> 5.2'
 gem 'materialize-sass'
 gem 'material_icons'
 gem 'jquery-rails'
-gem 'aws-sdk', '~> 2'
+gem 'aws-sdk', '< 2.0'
+# gem 'aws-sdk', '~> 2'
 gem 'figaro'
-gem "paperclip", git: "git://github.com/thoughtbot/paperclip.git"
+gem "paperclip"
+gem 'dotenv-rails', require: 'dotenv/rails-now'
+# gem "paperclip", git: "git://github.com/thoughtbot/paperclip.git"
 gem 'actionmailer', '~> 5.1', '>= 5.1.4'
 gem 'maskedinput-rails', '~> 1.4', '>= 1.4.1.0'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'

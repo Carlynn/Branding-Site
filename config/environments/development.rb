@@ -1,16 +1,5 @@
 Rails.application.configure do
 
-  config.paperclip_defaults = {
-       storage: :s3,
-       s3_credentials: {
-         bucket: ENV['hcdesignsby'],
-         access_key_id: ENV['AKIAJ7KNCZGLAYHSK6OA'],
-         secret_access_key: ENV['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'],
-         s3_host_name: ENV['s3-us-west-1.amazonaws.com'],
-         s3_region: ENV['us-west-1']
-       }
-   }
-
   # Settings specified here will take precedence over those in config/application.rb.
   config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }
   # In the development environment your application's code is reloaded on
@@ -63,5 +52,16 @@ Rails.application.configure do
   # Use an evented file watcher to asynchronously detect changes in source code,
   # routes, locales, etc. This feature depends on the listen gem.
   config.file_watcher = ActiveSupport::EventedFileUpdateChecker
+
+  config.paperclip_defaults = {
+       storage: :s3,
+       bucket: ENV.fetch('S3_BUCKET_NAME'),
+       s3_credentials: {
+         access_key_id: ENV.fetch('AWS_ACCESS_KEY_ID'),
+         secret_access_key: ENV.fetch('AWS_SECRET_ACCESS_KEY'),
+         s3_host_name: ENV['s3-us-west-1.amazonaws.com'],
+         s3_region: ENV.fetch('AWS_REGION')
+       }
+   }
 
 end
