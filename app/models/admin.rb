@@ -3,7 +3,7 @@ class Admin < ApplicationRecord
   attr_accessor :image
 
   has_attached_file :image,
-    :styles => { lage: "600x600", medium: "300x300>", thumb: "100x100#" },
+    :styles => { lage: "600x600", medium: "300x300>", thumb: "100x100#", thumbp: "100x100>" },
     :default_url => "/images/:style/missing.png",
     :storage => :s3,
     bucket: ENV.fetch('S3_BUCKET_NAME'),

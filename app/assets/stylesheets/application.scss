@@ -19,28 +19,28 @@
 @import "materialize/extras/nouislider";
 
 body {
-  font-family: "roboto", "Cinzel", serif;
+  font-family: "Cinzel", serif;
   color: #B2B2B2;
   //  display: flex;
   //  min-height: 100vh;
   //  flex-direction: column;
  }
  // Put this in SASS format
-h1 {
-  font-family: "mrs-eaves-roman-small-caps", "Cinzel", serif;
-}
-h2 {
-  font-family: "mrs-eaves-roman-small-caps", "Cinzel", serif;
-}
-h3 {
-  font-family: "mrs-eaves-roman-small-caps", "Cinzel", serif;
-}
-h4 {
-  font-family: "mrs-eaves-roman-small-caps", "Cinzel", serif;
-}
-h5 {
-  font-family: "mrs-eaves-roman-small-caps", "Cinzel", serif;
-}
+// h1 {
+//   font-family: "mrs-eaves-roman-small-caps", "Cinzel", serif;
+// }
+// h2 {
+//   font-family: "mrs-eaves-roman-small-caps", "Cinzel", serif;
+// }
+// h3 {
+//   font-family: "mrs-eaves-roman-small-caps", "Cinzel", serif;
+// }
+// h4 {
+//   font-family: "mrs-eaves-roman-small-caps", "Cinzel", serif;
+// }
+// h5 {
+//   font-family: "mrs-eaves-roman-small-caps", "Cinzel", serif;
+// }
 a {
  color: inherit;
  text-decoration: inherit;
@@ -48,6 +48,21 @@ a {
 input {
   margin: 0 !important;
 }
+// .input-field input[type=text]:focus {
+//   background-color: #E4CFCF !important;
+// }
+// .input-field input[type=text]:focus {
+//   background-color: #E4CFCF !important;
+// }
+// .input-field input:focus + label {
+//    color: red !important;
+//    background-color: #E4CFCF !important;
+//  }
+//  .row .input-field input:focus {
+//   border-bottom: 1px solid red !important;
+//   box-shadow: 0 1px 0 0 red !important;
+//   background-size: 50px;
+// }
  // main {
  //    flex: 1 0 auto;
  //  }
@@ -67,6 +82,7 @@ input {
 .nav-wrapper {
   background-color: #E4CFCF;
 }
+
 .gold-txt {
   color:#c3a343;
     -webkit-text-fill-color: transparent;
@@ -83,4 +99,34 @@ input {
 }
 .link-color:hover {
   color: #26a69a;
+}
+.text-color {
+  color: #E4CFCF;
+}
+.profile-image {
+  width: 100%;
+  height: auto;
+}
+.btn-floating {
+  background-color: transparent;
+  box-shadow: none;
+}
+.btn-floating:hover {
+  background-color: transparent;
+  box-shadow: none;
+}
+// SASS: Inherets from link-color
+.btn-floating i {
+  color: #C95D63;
+}
+.cont-rel {
+  position: relative;
+}
+.btn-abs {
+  position: absolute;
+  right:0;
+  top:2%;
+}
+.btn-inline {
+  display: inline;
 }

@@ -2,6 +2,11 @@ class AdminsController < ApplicationController
 
   def show
     @admin = Admin.friendly.find(params[:slug])
+    @posts = @admin.posts.order(created_at: :desc)
+    if (@admin == current_admin)
+    else
+      redirect_to root_path, :flash => { :error => "Sorry, you must be logged in to view admin profile" }
+    end
   end
 
   # Is this better here or in the models?
