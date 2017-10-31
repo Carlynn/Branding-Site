@@ -28,13 +28,7 @@ Rails.application.configure do
   end
 
   # Don't care if the mailer can't send.
-<<<<<<< HEAD
-  config.action_mailer.delivery_method = :smtp
-
-=======
->>>>>>> 0d0fa0d63e6ab82c043af91768ca0886e126efe3
   config.action_mailer.raise_delivery_errors = true
-
   config.action_mailer.perform_caching = false
 
   # Print deprecation notices to the Rails logger.
