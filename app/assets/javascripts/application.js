@@ -21,6 +21,7 @@
 $(document).on("turbolinks:load", function() {
   $(".button-collapse").sideNav();
   $(".dropdown-button").dropdown();
+  $('.materialboxed').materialbox();
 
   $(".div-btn").click(function(){
     window.location = $(this).attr("href");

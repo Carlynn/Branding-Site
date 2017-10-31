@@ -1,6 +1,47 @@
-<p>profile page</p>
-<p> <%= image_tag @admin.image.url(:medium), class: "circle" %></p>
-<p><%= @admin.first_name %> <%= @admin.last_name %></p>
-<p>Email: <%= @admin.email %></p>
-<p>Date Joined: <%= @admin.created_at.strftime("%B").to_s + " " + @admin.created_at.year.to_s %> </p>
-<%= button_to "Edit Profile", (edit_admin_registration_path), method:'get', class: "btn" %>
+
+<div class="container">
+  <div class="row">
+    <div class="col s12">
+      <h2 class="center-align">Welcome
+        <div class="gold-txt"> <%= @admin.first_name %> <%= @admin.last_name %></b>
+        </div>
+      </h2>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col s12 m4">
+        <%= image_tag @admin.image.url(:medium), class: "profile-image" %></p>
+    </div>
+    <div class="col s12 m8 cont-rel">
+      <h5 class="cursive">“Life-fulfilling work is never about the money -- when you feel true passion for something, you instinctively find ways to nurture it.”</h5>
+      <p><b>Email: </b><%= @admin.email %></p>
+      <p><b>Date Joined: </b><%= @admin.created_at.strftime("%B").to_s + " " + @admin.created_at.year.to_s %></p>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col s12">
+      <h2>Portfolio of Work</h2>
+      <hr class="hr-gray">
+    </div>
+  </div>
+  <% @posts.each do |post| %>
+    <div class="row">
+      <div class="col s12 m4">
+        <%= link_to image_tag(post.image.url(:medium), class: "profile-image"), portfolio_path(post.slug) %>
+      </div>
+      <div class="col s12 m6">
+        <h5><%= link_to post.title, portfolio_path(post.slug) %></h5>
+        <p><b>Date Created: </b><%= post.created_at.strftime("%B").to_s + " " + post.created_at.year.to_s %> </p>
+        <p>Description: <%= post.description.slice(0, 500)+"..." %>
+        <%= link_to "Read More", portfolio_path(post.slug), class: "link-color" %><br></p>
+        <%= link_to(edit_portfolio_path(post.slug), class: "btn-floating btn-medium left") do  %>
+          <i class="medium material-icons">mode_edit</i>
+        <% end %>
+        <%= button_to(portfolio_path(post.id), method: 'delete', data:   {:confirm => "Are you sure you want to delete the #{post.title} from the portfolio?"}, :method => :delete, class: "btn-floating btn-medium left") do  %>
+          <i class="medium material-icons">delete</i>
+        <% end %>
+      </div>
+    </div>
+    <hr>
+  <% end %>
+  </div>

@@ -32,6 +32,8 @@
             <ul id="dropdown1" class="dropdown-content">
               <li><%=link_to "PROFILE", admin_path(current_admin) %></li>
               <li class="divider"></li>
+              <li><%=link_to "EDIT PROFILE", edit_admin_registration_path %></li>
+              <li class="divider"></li>
               <li><%=link_to "CREATE", new_portfolio_path %></li>
               <li class="divider"></li>
               <li><%= link_to('Logout', destroy_admin_session_path, method: :delete) %></li>
@@ -55,6 +57,18 @@
         </div>
       </nav>
     </div>
+
+  <%= stylesheet_link_tag %>
+
+  <%= yield(:head) %>
+  <div class="col s8">
+    <% flash.each do |name, msg| %>
+    <div id='toast-container'>
+      <%= javascript_tag "Materialize.toast('#{msg}', 4000)" %>
+    </div>
+    <% end %>
+  </div>
+
     <%= yield %>
         <footer style="border: blue solid 2px">
           <div class="footer-copyright">

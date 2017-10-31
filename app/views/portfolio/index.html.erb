@@ -1,14 +1,33 @@
-<p>test portfolio</p>
-
-<% @posts.each do |post| %>
-  <p><%= image_tag post.image.url(:medium) %></p>
-  <p><%= link_to post.title, portfolio_path(post.slug) %></p>
-  <p>Description: <%= post.description.slice(0, 500)+"..." %>
-    <%= link_to "Read More", portfolio_path(post.slug) %><br></p>
-  <p>Date Created: <%= post.created_at.strftime("%B").to_s + " " + post.created_at.year.to_s %> </p>
-  <% if current_admin %>
-    <%= button_to "Edit Post", edit_portfolio_path(post.slug), method:'get', class: "btn" %>
-    <%= button_to "Delete", portfolio_path(post.id), method: 'delete', data: {:confirm => "Are you sure you want to delete the #{post.title} post?"}, :method => :delete, class: "btn" %>
-  <% end %>
-  <hr>
-<% end %>
+<div class="container">
+  <h1 class="center-align">Portfolio</h1>
+  <hr class="hr-gray">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col s12">
+        <p class="center-align">It is our goal to deliver a quality product for all of our customers. Please take a minute and take a look at some of our past work.</p>
+      </div>
+    </div>
+    <% @posts.each do |post| %>
+    <div class="row">
+      <div class="col s12 m4">
+        <%= link_to image_tag(post.image.url(:medium), class: "profile-image"), portfolio_path(post.slug) %>
+      </div>
+        <div class="col s12 m6">
+        <p><%= link_to post.title, portfolio_path(post.slug), class: "link-color" %></p>
+        <p>Description: <%= post.description.slice(0, 500)+"..." %>
+          <%= link_to "Read More", portfolio_path(post.slug) %><br></p>
+        <p>Date Created: <%= post.created_at.strftime("%B").to_s + " " + post.created_at.year.to_s %> </p>
+        <% if current_admin %>
+          <%= link_to(edit_portfolio_path(post.slug), class: "btn-floating btn-medium left") do  %>
+            <i class="medium material-icons">mode_edit</i>
+          <% end %>
+          <%= button_to(portfolio_path(post.id), method: 'delete', data:   {:confirm => "Are you sure you want to delete the #{post.title} from the portfolio?"}, :method => :delete, class: "btn-floating btn-medium left") do  %>
+            <i class="medium material-icons">delete</i>
+          <% end %>
+        <% end %>
+      </div>
+    </div>
+    <hr>
+    <% end %>
+  </div>
+</div>
