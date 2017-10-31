@@ -39,7 +39,7 @@ class PortfolioController < ApplicationController
       @post.update(post_params)
       if params[:images]
         params[:images].each { |image|
-          @post.images.create(image: image)
+          @post.images.update(image: image)
         }
       end
       redirect_to portfolio_path(@post)
