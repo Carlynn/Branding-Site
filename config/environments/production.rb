@@ -61,9 +61,14 @@ Rails.application.configure do
   # Use a real queuing backend for Active Job (and separate queues per environment)
   # config.active_job.queue_adapter     = :resque
   # config.active_job.queue_name_prefix = "branding-site_#{Rails.env}"
+<<<<<<< HEAD
 
   config.action_mailer.raise_delivery_errors = true
   config.action_mailer.perform_deliveries = true
+=======
+  config.action_mailer.perform_caching = false
+  config.action_mailer.raise_delivery_errors = true
+>>>>>>> 0d0fa0d63e6ab82c043af91768ca0886e126efe3
 
   # Ignore bad email addresses and do not raise email delivery errors.
   # Set this to true and configure the email server for immediate delivery to raise delivery errors.

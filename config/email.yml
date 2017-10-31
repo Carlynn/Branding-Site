@@ -1,6 +1,7 @@
 development:
   :address: smtp.gmail.com
   :port: 587
+<<<<<<< HEAD
   :domain: http://localhost:3000/
   :authentication: login
   :user_name: ENV.fetch('MY_EMAIL')
@@ -14,3 +15,16 @@ production:
   :user_name: ENV.fetch('MY_EMAIL')
   :password: ENV['MY_PASSWORD']
   :enable_starttls_auto: true
+=======
+  :authentication: plain
+  :user_name: ENV.fetch('MY_EMAIL')
+  :password: ENV.fetch('MY_PASSWORD')
+  # :enable_starttls_auto: true
+production:
+  :address: smtp.gmail.com
+  :port: 587
+  :authentication: plain
+  :user_name: ENV.fetch('MY_EMAIL')
+  :password: ENV.fetch('MY_PASSWORD')
+  # :enable_starttls_auto: true
+>>>>>>> 0d0fa0d63e6ab82c043af91768ca0886e126efe3
