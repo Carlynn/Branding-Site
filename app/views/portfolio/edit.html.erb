@@ -1,26 +1,53 @@
-<p>edit post page</p>
-<%= form_for @post, url: portfolio_path(@post), method: "patch" do |f| %>
-    <div>
-      <%= f.label :title %>
-      <%= f.text_field :title %>
+<div class="container">
+  <div class="row">
+    <div class="col s12">
+      <h1 class="center-align">Edit <%= @post.title %></h1>
+      <hr class="hr-gray">
     </div>
-    <div>
-      <%= f.label :description %>
-      <%= f.text_field :description %>
-    </div>
-    <div>
-      <%= f.label :image %>
-      <% if @post.image.exists? %>
-        <%= image_tag @post.image.url(:medium) %><br/>
+  </div>
+  <div class="container-fluid">
+    <%= form_for @post, url: portfolio_path(@post), method: "patch" do |f| %>
+      <div class="row">
+        <div class="col s12 m6">
+          <%= f.label :title %>
+          <%= f.text_field :title, autofocus: true %>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col s12">
+          <%= f.label :description %>
+          <%= f.text_area :description %>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col s12 m6">
+          <p>Update current default image: </p><%= f.file_field :image, class: "left" %>
+        </div>
+        <div class="col s12 m6">
+          <p>Add additional images: </p><%= file_field_tag "images[]", type: :file, multiple: true, class: "left" %>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col s12">
+          <%= f.label :image, "Current Default Image" %>
+        </div>
+        <div class="col s6 m4">
+          <% if @post.image.exists? %>
+            <%= image_tag @post.image.url(:medium) %><br/>
+          <% end %>
+        </div>
+        <div class="col s6 m4">
+          <% @postimages.each do |postimage| %>
+            <%= image_tag postimage.image.url(:medium) %>
+            <%= link_to "Delete", delete_image_path(postimage), :method => :delete, data: {:confirm => "Are you sure you want to delete the image?"}, class: "btn" %>
+          <% end %>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col s12">
+          <%= f.submit "Save Changes", class: "btn right" %>
+        </div>
+      </div>
       <% end %>
-      <%= f.file_field :image %>
     </div>
-    <div>
-      <% @postimages.each do |postimage| %>
-        <%= image_tag postimage.image.url(:medium) %>
-        <%= link_to "Delete", delete_image_path(postimage), :method => :delete, data: {:confirm => "Are you sure you want to delete the image?"}, class: "btn" %>
-      <% end %>
-      <%= file_field_tag "images[]", type: :file, multiple: true %>
-    </div>
-    <%= f.submit "Save Changes", class: "btn" %>
-  <% end %>
+  </div>

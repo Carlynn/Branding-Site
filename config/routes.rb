@@ -15,4 +15,7 @@ Rails.application.routes.draw do
   resources :portfolio, param: :slug, :only => [:show, :edit, :patch]
 
   resources :admins, param: :slug, :only => [:show, :edit]
+   
+  # match '/send_mail', to: 'contact#send_mail', via: 'post'
+
 end

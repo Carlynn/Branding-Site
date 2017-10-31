@@ -9,25 +9,17 @@
 Post.destroy_all
 
 posts = [{
-  title: "Test title 1",
-  description: "Definition: The marketing practice of creating a name, symbol or design that identifies and differentiates a product from other products .
+  title: "Queensborough",
+  description: "I am very proud to hold the Creative Director title at Queensborough. My role has been to create an original brand identity for the restaurant / bar, and then implement it across many platforms, which includes ongoing design work.
 
-An effective brand strategy gives you a major edge in increasingly competitive markets. But what exactly does 'branding' mean? Simply put, your brand is your promise to your customer. It tells them what they can expect from your products and services, and it differentiates your offering from that of your competitors. Your brand is derived from who you are, who you want to be and who people perceive you to be.
+Owners Mike Vizcarra and Shane Brennan hired me to develop this project from the very beginning, from putting together the investor pitch deck, to designing the logo, to choosing staff uniforms and making sure all elements of branding were cohesive and beautiful. I designed all the menus, the gold decals on the windows, all flyers, social media graphics, and merchandise. I also designed, developed and manage QueensboroughSD.com.
 
-Are you the innovative maverick in your industry? Or the experienced, reliable one? Is your product the high-cost, high-quality option, or the low-cost, high-value option? You can't be both, and you can't be all things to all people. Who you are should be based to some extent on who your target customers want and need you to be.
-
-The foundation of your brand is your logo. Your website, packaging and promotional materials--all of which should integrate your logo--communicate your brand.
-
-Your brand strategy is how, what, where, when and to whom you plan on communicating and delivering on your brand messages. Where you advertise is part of your brand strategy. Your distribution channels are also part of your brand strategy. And what you communicate visually and verbally is part of your brand strategy, too.
-
-Consistent, strategic branding leads to a strong brand equity, which means the added value brought to your company's products or services that allows you to charge more for your brand than what identical, unbranded products command. The most obvious example of this is Coke vs. a generic soda. Because Coca-Cola has built a powerful brand equity, it can charge more for its product--and customers will pay that higher price.
-
-The added value intrinsic to brand equity frequently comes in the form of perceived quality or emotional attachment. For example, Nike associates its products with star athletes, hoping customers will transfer their emotional attachment from the athlete to the product. For Nike, it's not just the shoe's features that sell the shoe.",
-  image: "https://upload.wikimedia.org/wikipedia/commons/a/ab/Logo_TV_2015.png",
+Queensborough Uptown (upstairs) is open to the public seven days a week from 4pm–close. You can check it out in San Diego's Gaslamp District at 777 5th Avenue, 92101. I highly recommend a cocktail called The Big Apple. Downtown (downstairs) will open this August.",
+  image: "https://static1.squarespace.com/static/571670a9a3360c1a30ec94a3/t/5913ce991b10e3b63db3d3fb/1494470307783/QB_moodboard_v02.jpg?format=750w",
 },{
-  title: "Test title 2",
-  description: "description for test 2",
-  image: "https://s-media-cache-ak0.pinimg.com/originals/24/85/2b/24852b9d5888f9132f7ecd91bc4a95ae.png",
+  title: "Harvest",
+  description: " A sustainable and responsible market, restaurant, & gathering place located in San Diego's East Village. A Legal Restaurant & Patio Group Project. Coming July 2016. ",
+  image: "https://static1.squarespace.com/static/571670a9a3360c1a30ec94a3/t/5733926560b5e9974b76f062/1462997613077/?format=750w",
   },
 ]
 

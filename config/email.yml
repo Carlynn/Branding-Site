@@ -2,7 +2,7 @@ development:
   :address: smtp.gmail.com
   :port: 587
   :domain: http://localhost:3000/
-  :authentication: plain
+  :authentication: login
   :user_name: ENV.fetch('MY_EMAIL')
   :password: ENV['MY_PASSWORD']
   :enable_starttls_auto: true
@@ -10,7 +10,7 @@ production:
   :address: smtp.gmail.com
   :port: 587
   :domain: https://powerful-stream-25184.herokuapp.com/
-  :authentication: plain
+  :authentication: login
   :user_name: ENV.fetch('MY_EMAIL')
   :password: ENV['MY_PASSWORD']
   :enable_starttls_auto: true
