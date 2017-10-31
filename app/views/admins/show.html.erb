@@ -30,7 +30,7 @@
         <%= link_to image_tag(post.image.url(:medium), class: "profile-image"), portfolio_path(post.slug) %>
       </div>
       <div class="col s12 m6">
-        <h5><%= link_to post.title, portfolio_path(post.slug) %></h5>
+        <h5><%= link_to post.title, portfolio_path(post.slug), class: "link-color" %></h5>
         <p><b>Date Created: </b><%= post.created_at.strftime("%B").to_s + " " + post.created_at.year.to_s %> </p>
         <p>Description: <%= post.description.slice(0, 500)+"..." %>
         <%= link_to "Read More", portfolio_path(post.slug), class: "link-color" %><br></p>
