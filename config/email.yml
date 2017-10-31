@@ -1,17 +1,16 @@
 development:
   :address: smtp.gmail.com
   :port: 587
-  :domain: http://localhost:3000/
+  # :domain: http://localhost:3000/
   :authentication: login
   :user_name: ENV.fetch('MY_EMAIL')
   :password: ENV['MY_PASSWORD']
-  :enable_starttls_auto: true
+  # :enable_starttls_auto: true
 production:
   :address: smtp.gmail.com
   :port: 587
-  :domain: https://powerful-stream-25184.herokuapp.com/
+  # :domain: https://powerful-stream-25184.herokuapp.com/
   :authentication: login
   :user_name: ENV.fetch('MY_EMAIL')
-  :password: ENV['MY_PASSWORD']
-  :enable_starttls_auto: true
-  
+  :password: ENV.fetch('MY_PASSWORD')
+  # :enable_starttls_auto: true

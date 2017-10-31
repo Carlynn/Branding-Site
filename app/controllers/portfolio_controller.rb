@@ -11,10 +11,6 @@ class PortfolioController < ApplicationController
 
   def new
     @post = Post.new
-    if (@admin == current_admin)
-    else
-      redirect_to root_path, :flash => { :error => "Sorry, you must be and admin to view this page" }
-    end
   end
 
   def create
