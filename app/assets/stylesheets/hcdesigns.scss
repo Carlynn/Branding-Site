@@ -5,10 +5,13 @@
 .header {
   height: 90vh;
   width: 100%;
-  background: image-url("SplashPage_01.jpg") bottom center no-repeat;
+  background: image-url("SplashPage_04.jpg");
   background-size: cover;
   z-index: -1;
   margin-bottom: 40px;
+}
+.txt-shadow {
+  text-shadow: 2px 2px #6a6a6a;
 }
 .header-title {
   position: absolute;
@@ -18,7 +21,7 @@
   height: 180px;
 }
 .inner-box {
-  width: 70%;
+  width: 80%;
   height: 70%;
   margin: 0 auto;
   position: relative;

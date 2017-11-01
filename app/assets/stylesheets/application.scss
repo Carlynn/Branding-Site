@@ -21,26 +21,7 @@
 body {
   font-family: "Cinzel", serif;
   color: #6a6a6a;
-  //  display: flex;
-  //  min-height: 100vh;
-  //  flex-direction: column;
  }
- // Put this in SASS format
-// h1 {
-//   font-family: "mrs-eaves-roman-small-caps", "Cinzel", serif;
-// }
-// h2 {
-//   font-family: "mrs-eaves-roman-small-caps", "Cinzel", serif;
-// }
-// h3 {
-//   font-family: "mrs-eaves-roman-small-caps", "Cinzel", serif;
-// }
-// h4 {
-//   font-family: "mrs-eaves-roman-small-caps", "Cinzel", serif;
-// }
-// h5 {
-//   font-family: "mrs-eaves-roman-small-caps", "Cinzel", serif;
-// }
 a {
  color: inherit;
  text-decoration: inherit;
@@ -48,21 +29,6 @@ a {
 input {
   margin: 0 !important;
 }
-// .input-field input[type=text]:focus {
-//   background-color: #E4CFCF !important;
-// }
-// .input-field input[type=text]:focus {
-//   background-color: #E4CFCF !important;
-// }
-// .input-field input:focus + label {
-//    color: red !important;
-//    background-color: #E4CFCF !important;
-//  }
-//  .row .input-field input:focus {
-//   border-bottom: 1px solid red !important;
-//   box-shadow: 0 1px 0 0 red !important;
-//   background-size: 50px;
-// }
  // main {
  //    flex: 1 0 auto;
  //  }
@@ -93,6 +59,17 @@ footer {
     image-url("rose-gold-texture-01.jpeg") repeat;
     background: -o-linear-gradient(transparent, transparent);
     -webkit-background-clip: text;
+}
+.rose-txt {
+  color:#c3a343;
+    -webkit-text-fill-color: transparent;
+    background: -webkit-linear-gradient(transparent, transparent),
+    image-url("rose-gold-texture-01.jpeg") bottom no-repeat;
+    background: -o-linear-gradient(transparent, transparent);
+    -webkit-background-clip: text;
+}
+.heading-logo {
+  padding-left: 1.5rem;
 }
 .hr-gray {
   border: 1px solid #6a6a6a;
