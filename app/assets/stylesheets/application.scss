@@ -82,7 +82,10 @@ input {
 .nav-wrapper {
   background-color: #E4CFCF;
 }
-
+footer {
+  background-color: #E4CFCF;
+  height: 3.5rem;
+}
 .gold-txt {
   color:#c3a343;
     -webkit-text-fill-color: transparent;
@@ -172,4 +175,17 @@ input {
 }
 textarea {
   color: #C95D63;
+}
+.logo-thumb {
+  width: 25px;
+  height: 25px;
+}
+.footer-content {
+    // display: inline-block;
+    // border: 1px solid red;
+    // position:relative;
+    // text-align: center;
+  }
+.img-vert {
+   vertical-align: middle;
 }

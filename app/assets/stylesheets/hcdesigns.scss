@@ -111,3 +111,13 @@
     background: -o-linear-gradient(transparent, transparent);
     -webkit-background-clip: text;
 }
+.pos-abs {
+  position: absolute;
+}
+.bottom-right {
+  bottom: 0;
+}
+.image-full {
+  width: 100%;
+  height: 100%;
+}
