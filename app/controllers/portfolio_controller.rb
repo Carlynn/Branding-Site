@@ -34,7 +34,6 @@ class PortfolioController < ApplicationController
   def edit
     @post = Post.friendly.find(params[:slug])
     @postimages = @post.images
-
   end
 
   def update
