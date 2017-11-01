@@ -39,7 +39,7 @@
           <% @postimages.each do |postimage| %>
           <div class="col s6 m4 pos-rel">
             <%= image_tag postimage.image.url(:medium), class: "materialboxed profile-image #{postimage.id}" %>
-            <div class="top">
+            <div class="top"> 
             <%= link_to(delete_image_path(postimage), method: 'delete', data: {:confirm => "Are you sure you want to delete the image?"}, :method => :delete, class: "btn-floating btn-medium right") do  %>
               <i class="medium material-icons">delete</i>
             </div>

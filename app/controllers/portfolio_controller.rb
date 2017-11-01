@@ -59,8 +59,8 @@ class PortfolioController < ApplicationController
   def destroy
     post_id = params[:id]
     post = Post.find_by_id(post_id)
-    post.destroy 
-    redirect_back(fallback_location: portfolio_path)
+    post.destroy
+    redirect_back(fallback_location: portfolio_index_path)
   end
 
   private
