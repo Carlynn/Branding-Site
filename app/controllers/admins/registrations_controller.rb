@@ -36,8 +36,13 @@ class Admins::RegistrationsController < Devise::RegistrationsController
   #   super
   # end
 
-  # protected
+  protected
 
+  def after_update_path_for(resource)
+    puts resource
+    stored_location_for(resource)
+  end
+  
   # If you have extra params to permit, append them to the sanitizer.
   # def configure_sign_up_params
   #   devise_parameter_sanitizer.permit(:sign_up, keys: [:attribute])

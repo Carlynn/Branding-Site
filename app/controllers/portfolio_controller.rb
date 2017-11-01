@@ -13,7 +13,7 @@ class PortfolioController < ApplicationController
     @post = Post.new
     if (current_admin)
     else
-      redirect_to root_path, :flash => { :error => "Sorry, you must be an admin" }
+      redirect_to root_path, :flash => { :error => "Sorry, you must be an admin to view this page" }
     end
   end
 
@@ -34,6 +34,10 @@ class PortfolioController < ApplicationController
   def edit
     @post = Post.friendly.find(params[:slug])
     @postimages = @post.images
+    if (current_admin)
+    else
+      redirect_to root_path, :flash => { :error => "Sorry, you must be an admin to edit this post" }
+    end
   end
 
   def update
@@ -55,7 +59,7 @@ class PortfolioController < ApplicationController
   def destroy
     post_id = params[:id]
     post = Post.find_by_id(post_id)
-    post.destroy
+    post.destroy 
     redirect_back(fallback_location: portfolio_path)
   end
 

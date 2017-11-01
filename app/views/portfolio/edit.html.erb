@@ -1,7 +1,7 @@
 <div class="container">
   <div class="row">
     <div class="col s12">
-      <h1 class="center-align">Edit <%= @post.title %></h1>
+      <h1 class="center-align">Edit: <%= @post.title %></h1>
       <hr class="hr-gray">
     </div>
   </div>
@@ -33,15 +33,19 @@
         </div>
         <div class="col s6 m4">
           <% if @post.image.exists? %>
-            <%= image_tag @post.image.url(:medium) %><br/>
+            <%= image_tag @post.image.url(:medium), class: "materialboxed profile-image" %><br/>
           <% end %>
         </div>
-        <div class="col s6 m4">
           <% @postimages.each do |postimage| %>
-            <%= image_tag postimage.image.url(:medium) %>
-            <%= link_to "Delete", delete_image_path(postimage), :method => :delete, data: {:confirm => "Are you sure you want to delete the image?"}, class: "btn" %>
+          <div class="col s6 m4 pos-rel">
+            <%= image_tag postimage.image.url(:medium), class: "materialboxed profile-image #{postimage.id}" %>
+            <div class="top">
+            <%= link_to(delete_image_path(postimage), method: 'delete', data: {:confirm => "Are you sure you want to delete the image?"}, :method => :delete, class: "btn-floating btn-medium right") do  %>
+              <i class="medium material-icons">delete</i>
+            </div>
+            <% end %>
+          </div>
           <% end %>
-        </div>
       </div>
       <div class="row">
         <div class="col s12">

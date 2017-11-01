@@ -4,3 +4,11 @@
 textarea#post_description {
   height: 10rem;
 }
+.pos-rel {
+  position: relative;
+}
+.top {
+  position: absolute;
+  top: 0;
+  right: 1%;
+}

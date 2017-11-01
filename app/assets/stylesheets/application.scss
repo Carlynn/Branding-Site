@@ -150,3 +150,26 @@ input {
     padding-top: 10rem;
     margin-top: -10rem;
 }
+.btn {
+  border: #B2B2B2 1px solid;
+  background-color: transparent;
+  color: #B2B2B2;
+  box-shadow: none;
+}
+.btn:hover {
+  background-color: transparent;
+  color: #C95D63;
+}
+// put this at the top, SASS
+input#post_image {
+  color: #C95D63;
+}
+input#images_ {
+  color: #C95D63;
+}
+input {
+  color: #C95D63;
+}
+textarea {
+  color: #C95D63;
+}

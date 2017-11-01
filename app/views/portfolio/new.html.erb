@@ -9,20 +9,20 @@
     <%= form_for @post, :url => {:controller => "portfolio"} do |f| %>
     <div class="row">
       <div class="col s6">
-        Title*: <%= f.text_field :title, :required => true, autofocus: true %>
+        <p>Title*: </p><%= f.text_field :title, :required => true, autofocus: true %>
       </div>
     </div>
     <div class="row">
       <div class="col s12">
-        Description*: <%= f.text_area :description, :required => true %>
+        <p>Description*: </p><%= f.text_area :description, :required => true %>
       </div>
     </div>
     <div class="row">
       <div class="col s12 m6">
-        Main Content Photo*: <%= f.file_field :image, :required => true %>
+        <p>Main Content Photo*: </p><%= f.file_field :image, :required => true %>
       </div>
       <div class="col s12 m6">
-        Additional Photos: <%= file_field_tag "images[]", type: :file, multiple: true %>
+        <p>Additional Photos: </p><%= file_field_tag "images[]", type: :file, multiple: true %>
       </div>
     </div>
     <div class="row">

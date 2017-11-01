@@ -10,11 +10,11 @@ Post.destroy_all
 
 posts = [{
   title: "Queensborough",
-  description: "I am very proud to hold the Creative Director title at Queensborough. My role has been to create an original brand identity for the restaurant / bar, and then implement it across many platforms, which includes ongoing design work.
+  description: "We are am very proud to hold the Creative Director title at Queensborough. Our role has been to create an original brand identity for the restaurant / bar, and then implement it across many platforms, which includes ongoing design work.
 
-Owners Mike Vizcarra and Shane Brennan hired me to develop this project from the very beginning, from putting together the investor pitch deck, to designing the logo, to choosing staff uniforms and making sure all elements of branding were cohesive and beautiful. I designed all the menus, the gold decals on the windows, all flyers, social media graphics, and merchandise. I also designed, developed and manage QueensboroughSD.com.
+Owners Mike Vizcarra and Shane Brennan hired us to develop this project from the very beginning, from putting together the investor pitch deck, to designing the logo, to choosing staff uniforms and making sure all elements of branding were cohesive and beautiful. We designed all the menus, the gold decals on the windows, all flyers, social media graphics, and merchandise. We also designed, developed and manage QueensboroughSD.com.
 
-Queensborough Uptown (upstairs) is open to the public seven days a week from 4pm–close. You can check it out in San Diego's Gaslamp District at 777 5th Avenue, 92101. I highly recommend a cocktail called The Big Apple. Downtown (downstairs) will open this August.",
+Queensborough Uptown (upstairs) is open to the public seven days a week from 4pm–close. You can check it out in San Diego's Gaslamp District at 777 5th Avenue, 92101. We highly recommend a cocktail called The Big Apple. Downtown (downstairs) will open this August.",
   image: "https://static1.squarespace.com/static/571670a9a3360c1a30ec94a3/t/5913ce991b10e3b63db3d3fb/1494470307783/QB_moodboard_v02.jpg?format=750w",
 },{
   title: "Harvest",
