@@ -4,35 +4,38 @@
 
 .circle-a {
   display: inline-block;
-  background-color: red;
+  background-color: #fbe2d9;
 }
 .circle-b {
   display: inline-block;
-  background-color: pink;
+  background-color: #c1d6d6;
 }
 .circle-c {
   display: inline-block;
-  background-color: yellow;
+  background-color: #5c5866;
 }
 .circle-d {
   display: inline-block;
-  background-color: green;
+  background-color: #de9b9a;
 }
 .rectangle-flex {
   position: relative;
   width: 100%;
   height: auto;
   padding-top: 50%;
-  border: #B2B2B2 solid 1px;
+  border: #6a6a6a solid 1px;
 }
 .rectangle-a {
-  background-color: red;
+  background-image: url("https://s-media-cache-ak0.pinimg.com/originals/c5/37/54/c5375420bf9e4b6d672931e841ecee01.jpg");
+  background-size: cover;
 }
 .rectangle-b {
-  background-color: pink;
+  background-image: image-url("rose-gold-01.png");
+  background-size: cover;
 }
 .rectangle-c {
-  background-color: yellow;
+  background-image: url("https://st.hzcdn.com/simgs/ab51a92307c845c2_4-9647/contemporary-wall-decals.jpg");
+  background-size: cover;
 }
 .circle-insp {
   position: relative;
@@ -40,27 +43,30 @@
   width: 100%;
   height: auto;
   padding-top: 100%;
-  border: #B2B2B2 solid 1px;
+  border: #6a6a6a solid 1px;
 }
 .parent-padding {
   padding: 3% !important;
 }
 .square-flex {
-  position: relative;
   width: 100%;
-  height: auto;
-  padding-top: 100%;
-  border: #B2B2B2 solid 1px;
+  height: 10rem;
+  border: #6a6a6a solid 1px;
 }
 .square-a {
-  // background-color: red;
+  background-image: image-url("logo-01.png");
+  background-size: cover;
 }
 .square-b {
-  // background-color: pink;
+  background-image: url("logo-02.png");
+  // background-size: cover;
+  width: 100%;
+  height: 100%;
 }
-.square-c {
-  // background-color: yellow;
-}
-.square-d {
-  // background-color: orange;
+img.square-c {
+  background-image: image-url("logo-03.png");
+  // background-size: cover;
+  // background-repeat: no-repeat;
+  // width: 100%;
+  // height:100%;
 }

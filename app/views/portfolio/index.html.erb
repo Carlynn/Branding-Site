@@ -12,7 +12,7 @@
       <div class="col s12 m4">
         <%= link_to image_tag(post.image.url(:medium), class: "profile-image"), portfolio_path(post.slug) %>
       </div>
-        <div class="col s12 m6">
+        <div class="col s12 m8">
         <h5><%= link_to post.title, portfolio_path(post.slug), class: "link-color" %></h5>
         <p>Description: <%= post.description.slice(0, 500)+"..." %>
           <%= link_to "Read More", portfolio_path(post.slug), class: "link-color" %><br></p>

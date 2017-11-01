@@ -8,7 +8,7 @@ textarea#post_description {
   position: relative;
 }
 .top {
-  position: absolute;
+  position: absolute !important;
   top: 0;
   right: 1%;
 }

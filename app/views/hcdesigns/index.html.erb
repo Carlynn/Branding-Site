@@ -60,18 +60,20 @@
       <div class="col s12">
         <h2 class="center-align">INSPIRATION</h2>
       </div>
-      <div class="row cont-box">
-        <div class="col s4 med-box a-box"></div>
-        <div class="col s4 med-box b-box"></div>
-        <div class="col s4 small-box c-box"></div>
-        <div class="col s4 small-box d-box"></div>
-        <div class="col s4 large-box e-box"></div>
-        <div class="col s4 large-box f-box"></div>
-        <div class="col s4 small-box g-box"></div>
-        <div class="col s4 small-box h-box"></div>
-        <div class="col s4 small-box i-box"></div>
-        <div class="circle abs-circle"></div>
-      </div>
+      <%= link_to inspiration_path do %>
+        <div class="row cont-box">
+          <div class="col s4 med-box a-box" href="/inspiration"></div>
+          <div class="col s4 med-box b-box"></div>
+          <div class="col s4 small-box e-box"></div>
+          <div class="col s4 small-box f-box"></div>
+          <div class="col s4 large-box c-box"></div>
+          <div class="col s4 large-box d-box"></div>
+          <div class="col s4 small-box g-box"></div>
+          <div class="col s4 small-box h-box"></div>
+          <div class="col s4 small-box i-box"></div>
+          <div class="circle abs-circle"></div>
+        </div>
+      <% end %>
     </div>
   </div>
   <div class="container-full">

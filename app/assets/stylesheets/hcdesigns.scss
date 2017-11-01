@@ -34,7 +34,7 @@
   background-color: #E4CFCF;
 }
 .inner-fill-box:hover {
-  box-shadow: 0px 0px 15px 2px #B2B2B2;
+  box-shadow: 0px 0px 15px 2px #6a6a6a;
   cursor: pointer;
   background-color: #E4CFCF;
 }
@@ -62,37 +62,42 @@
   border: white solid 2px;
 }
 .a-box {
-  background-color: blue;
+  background-image: url("https://i.pinimg.com/736x/78/81/03/7881036575d15f28f497de2a2f61f7f5--red-watercolor-background-pink-watercolor-wallpaper.jpg");
+  background-size: cover;
 }
 .b-box {
-  background-color: red;
+  background-image: image-url("palm-02.png");
+  background-size: cover;
 }
 .c-box {
-  background-color: orange;
+  background-image: image-url("palm-01.png");
+  background-size: cover;
 }
 .d-box {
-  background-color: pink;
+  background-image: url("https://s-media-cache-ak0.pinimg.com/originals/03/a8/e4/03a8e4e84f298e448899fd41d301d7cd.jpg");
+  background-size: cover;
 }
 .e-box {
-  background-color: pink;
+  background-color: #005245;
 }
 .f-box {
-  background-color: pink;
+  background-color: #22957d;
 }
 .g-box {
-  background-color: pink;
+  background-color: #77cdb6;
 }
 .h-box {
-  background-color: pink;
+  background-color:#c1dfdb;
 }
 .i-box {
-  background-color: pink;
+  background-color: #f4c6b1;
 }
 .abs-circle {
   position: absolute;
   height: 125px;
   width: 125px;
-  background-color: white;
+  background-image: url("https://i.pinimg.com/736x/89/0e/81/890e81b464a1b7a8f64fdddcbb046347--juice-logo-family-brand.jpg");
+  background-size: cover;
   border: white solid 2px;
   top: 190px;
   right: 25%;
