@@ -11,6 +11,10 @@ class PortfolioController < ApplicationController
 
   def new
     @post = Post.new
+    if (current_admin)
+    else
+      redirect_to root_path, :flash => { :error => "Sorry, you must be an admin" }
+    end
   end
 
   def create
@@ -30,16 +34,16 @@ class PortfolioController < ApplicationController
   def edit
     @post = Post.friendly.find(params[:slug])
     @postimages = @post.images
+
   end
 
   def update
-    @post = Post.find_by(params[:slug])
-    @postimages = @post.images
+    @post = Post.find_by(slug: params[:id])
     if @post.save
       @post.update(post_params)
       if params[:images]
         params[:images].each { |image|
-          @post.images.update(image: image)
+          @post.images.create(image: image)
         }
       end
       redirect_to portfolio_path(@post)

@@ -31,4 +31,10 @@ $(document).on("turbolinks:load", function() {
    $("#phone").mask("(999) 999-9999");
   });
 
+  function offsetAnchor() {
+  if (location.hash.length !== 0) {
+    window.scrollTo(window.scrollX, window.scrollY - 100);
+  }
+}
+
 });
